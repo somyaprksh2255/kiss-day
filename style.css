@@ -1,0 +1,122 @@
+body {
+    background: #ffeff6;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title {
+    color: #ff69b4;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.heart-container {
+    position: relative;
+    margin: 30px 0;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background: #ff3f6d;
+    margin: 0 auto;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background: #ff3f6d;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart::after {
+    left: -50px;
+    top: 0;
+}
+
+.heart:hover {
+    transform: rotate(45deg) scale(1.2);
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.heart:hover + .message {
+    opacity: 1;
+}
+
+.gif-container {
+    margin: 30px 0;
+}
+
+.kiss-gif {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.game-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.game-area {
+    width: 100%;
+    height: 200px;
+    background: #ffe6ee;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.secret-message {
+    margin: 30px 0;
+}
+
+#revealBtn {
+    background: #ff69b4;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: transform 0.3s;
+}
+
+#revealBtn:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
